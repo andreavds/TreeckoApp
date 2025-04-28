@@ -7,9 +7,9 @@ const authMiddleware = (req, res, next) => {
     }
 
     try {
-        const token = authorizationHeader.split(' ')[1]; // Extract the token from "Bearer <token>"
-        const decoded = verifyToken(token); // Use the utility function to verify the token
-        req.userId = decoded.userId; // Attach userId from the payload to the request
+        const token = authorizationHeader.split(' ')[1];
+        const decoded = verifyToken(token);
+        req.userId = decoded.userId;
         next();
     } catch (error) {
         console.error('Error verifying token:', error.message);

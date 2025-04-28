@@ -60,9 +60,9 @@ const loginUser = async (req, res) => {
             return res.status(400).json({ message: 'Invalid credentials' });
         }
 
-        // Generate JWT using the utility function
         const token = generateToken(user.id);
         res.json({ token });
+        console.log(token);
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).json({ message: 'Server error' });

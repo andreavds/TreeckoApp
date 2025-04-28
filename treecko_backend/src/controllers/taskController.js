@@ -95,9 +95,8 @@ const updateTask = async (req, res) => {
 
 const deleteTask = async (req, res) => {
     try {
-        const { id: taskId } = req.params; // Extract the task ID from the route
+        const { id: taskId } = req.params;
 
-        // Check if the task exists
         const [taskCheck] = await db.execute(
             `SELECT id FROM tasks WHERE id = ?`,
             [taskId]
@@ -106,7 +105,6 @@ const deleteTask = async (req, res) => {
             return res.status(404).json({ message: 'Task not found' });
         }
 
-        // Delete the task from the database
         await db.execute(
             `DELETE FROM tasks WHERE id = ?`,
             [taskId]
