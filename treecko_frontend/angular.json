@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "treecko": {
+    "treecko_frontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/treecko",
+            "outputPath": "dist/treecko_frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "treecko:build:production"
+              "buildTarget": "treecko_frontend:build:production"
             },
             "development": {
-              "buildTarget": "treecko:build:development"
+              "buildTarget": "treecko_frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,9 +84,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+                "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
@@ -97,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "338eab83-ccb7-4450-a69f-151c469c1a7c"
   }
 }

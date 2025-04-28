@@ -1,0 +1,11 @@
+
+<div class="dialog">
+    <h3>Create a New Board</h3>
+    <input
+      type="text"
+      [(ngModel)]="title"
+      placeholder="Enter board title"
+    />
+    <button (click)="submitTitle()">Create</button>
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+  </div>

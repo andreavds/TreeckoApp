@@ -1,0 +1,93 @@
+.dashboard {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: none; 
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
+}
+
+.boards-section {
+  flex: 2;
+  margin-right: 40px;
+}
+
+.boards-section h2 {
+  color: #81a651;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.boards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.board-card {
+  width: 600px;
+  padding: 15px 20px;
+  margin-bottom: 1px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #ccc; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s, transform 0.3s;;
+}
+
+.board-card:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
+}
+
+
+
+.create-board-section {
+  flex: 1;
+}
+
+.dialog {
+  background-color: #fff;
+  border: 2px solid #9e8772;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.dialog h3 {
+  color: #81a651;
+  margin-top: 0;
+}
+
+.dialog input {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #9e8772;
+}
+
+.dialog button {
+  background-color: #9e8772;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dialog button:hover {
+  background-color: #8a755f;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="dashboard">
+  <div class="boards-section">
+    <h2>Your Boards</h2>
+
+    <div class="boards-container">
+      <div
+        *ngFor="let board of boards"
+        class="board-card"
+        (click)="goToBoard(board.id, board.name)"
+      >
+        <h3>{{ board.name }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="create-board-section">
+    <app-board-dialog (createBoard)="onCreateBoard($event)"></app-board-dialog>
+  </div>
+</div>

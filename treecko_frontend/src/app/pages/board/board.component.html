@@ -1,0 +1,102 @@
+<app-header>
+</app-header>
+<div class="board-page">
+<h2>{{ boardTitle }}</h2>
+<div class="lists-container">
+    <div class="list">
+      <h3>To Do</h3>
+      <ng-container *ngFor="let task of tasks">
+        <div *ngIf="task.status === 1" class="task-card">
+          <div *ngIf="currentlyEditingTaskId === task.id">
+            <input type="text" [(ngModel)]="draftTasks[1]!.title" placeholder="Edit task title" />
+            <textarea [(ngModel)]="draftTasks[1]!.description" placeholder="Edit task description"></textarea>
+            <button (click)="saveEditedTask(1)">Save</button>
+            <button (click)="cancelEditTask(1)">Cancel</button>
+          </div>
+          <div *ngIf="currentlyEditingTaskId !== task.id">
+            <h4>{{ task.title }}</h4>
+            <p>{{ task.description }}</p>
+            <div class="task-actions">
+              <button (click)="editTask(task)">Edit</button>
+              <button (click)="deleteTask(task)">Delete</button>
+              <button (click)="switchTaskStatus(task)">Move to the next status</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <div *ngIf="!draftTasks[1]">
+        <button (click)="openCreateTaskRectangle(1)">+ Create Task</button>
+      </div>
+      <div *ngIf="draftTasks[1] && currentlyEditingTaskId === null" class="draft-task-card">
+        <input type="text" [(ngModel)]="draftTasks[1]!.title" placeholder="Enter task title" />
+        <textarea [(ngModel)]="draftTasks[1]!.description" placeholder="Enter task description"></textarea>
+        <button (click)="saveTask(1)">Save</button>
+        <button (click)="cancelEditTask(1)">Cancel</button>
+      </div>
+    </div>
+  
+    <div class="list">
+      <h3>In Progress</h3>
+      <ng-container *ngFor="let task of tasks">
+        <div *ngIf="task.status === 2" class="task-card">
+          <div *ngIf="currentlyEditingTaskId === task.id">
+            <input type="text" [(ngModel)]="draftTasks[2]!.title" placeholder="Edit task title" />
+            <textarea [(ngModel)]="draftTasks[2]!.description" placeholder="Edit task description"></textarea>
+            <button (click)="saveEditedTask(2)">Save</button>
+            <button (click)="cancelEditTask(2)">Cancel</button>
+          </div>
+          <div *ngIf="currentlyEditingTaskId !== task.id">
+            <h4>{{ task.title }}</h4>
+            <p>{{ task.description }}</p>
+            <div class="task-actions">
+              <button (click)="editTask(task)">Edit</button>
+              <button (click)="deleteTask(task)">Delete</button>
+              <button (click)="switchTaskStatus(task)">Move to the next status</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <div *ngIf="!draftTasks[2]">
+        <button (click)="openCreateTaskRectangle(2)">+ Create Task</button>
+      </div>
+      <div *ngIf="draftTasks[2] && currentlyEditingTaskId === null" class="draft-task-card">
+        <input type="text" [(ngModel)]="draftTasks[2]!.title" placeholder="Enter task title" />
+        <textarea [(ngModel)]="draftTasks[2]!.description" placeholder="Enter task description"></textarea>
+        <button (click)="saveTask(2)">Save</button>
+        <button (click)="cancelEditTask(2)">Cancel</button>
+      </div>
+    </div>
+  
+    <div class="list">
+      <h3>Done</h3>
+      <ng-container *ngFor="let task of tasks">
+        <div *ngIf="task.status === 3" class="task-card">
+          <div *ngIf="currentlyEditingTaskId === task.id">
+            <input type="text" [(ngModel)]="draftTasks[3]!.title" placeholder="Edit task title" />
+            <textarea [(ngModel)]="draftTasks[3]!.description" placeholder="Edit task description"></textarea>
+            <button (click)="saveEditedTask(3)">Save</button>
+            <button (click)="cancelEditTask(3)">Cancel</button>
+          </div>
+          <div *ngIf="currentlyEditingTaskId !== task.id">
+            <h4>{{ task.title }}</h4>
+            <p>{{ task.description }}</p>
+            <div class="task-actions">
+              <button (click)="editTask(task)">Edit</button>
+              <button (click)="deleteTask(task)">Delete</button>
+              <button (click)="switchTaskStatus(task)">Move to the next status</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+      <div *ngIf="!draftTasks[3]">
+        <button (click)="openCreateTaskRectangle(3)">+ Create Task</button>
+      </div>
+      <div *ngIf="draftTasks[3] && currentlyEditingTaskId === null" class="draft-task-card">
+        <input type="text" [(ngModel)]="draftTasks[3]!.title" placeholder="Enter task title" />
+        <textarea [(ngModel)]="draftTasks[3]!.description" placeholder="Enter task description"></textarea>
+        <button (click)="saveTask(3)">Save</button>
+        <button (click)="cancelEditTask(3)">Cancel</button>
+      </div>
+    </div>
+  </div>
+  </div>

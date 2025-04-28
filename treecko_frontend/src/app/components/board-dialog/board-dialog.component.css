@@ -1,0 +1,62 @@
+.dialog {
+  width: 400px;
+  margin-top: 60px;
+  padding: 40px;
+  background-color: #f9ffe9; 
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dialog h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #81a651;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.dialog input[type="text"] {
+  width: 80%;
+  padding: 12px 14px;
+  border: 2px solid #dac2b2;
+  border-radius: 6px;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5a5a5a;
+  transition: border-color 0.3s;
+  display: inline-block;
+}
+
+.dialog input[type="text"]::placeholder {
+  color: #7a7a7a;
+  font-weight: 500;
+}
+
+.dialog button {
+  width: 30%;
+  padding: 12px 0;
+  background-color: #81a651;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.dialog button:hover {
+  background-color: #6b8b41;
+}
+
+.error {
+  color: #d9534f;
+  margin-top: 20px;
+  font-weight: 600;
+}

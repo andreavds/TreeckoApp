@@ -1,0 +1,181 @@
+body {
+  background-color: #ecf8b0;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.board-page{
+  background-color: #ecf8b0;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 400;
+  color: #5a5a5a;
+  margin: 0px 0 2px 80px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.lists-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  position: relative;
+}
+
+
+.list {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #e0e0e0;
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 340px; 
+  min-height: 600px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  backdrop-filter: blur(4px); 
+}
+
+.list:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+
+.list h3 {
+  font-size: 20px;
+  color: #81a651;
+  font-weight: 600;
+  margin: 10px 0 8px 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.task-card {
+  background: white;
+  border-radius: 12px; 
+  padding: 10px 15px;
+  width: 90%;
+  margin: 10px auto;  
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.task-card h4 {
+  margin:  0 0 5px 0;
+  font-size: 18px;
+  color: #5a5a5a;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+}
+
+.task-card p {
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  color: #7a7a7a;
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  font-weight: 400;
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s, text-decoration 0.3s;
+  padding: 0;
+}
+
+.task-actions button:hover {
+  color: #ecf8b0;
+  text-decoration: underline;
+}
+
+.task-actions button:last-child {
+  font-size: 14px;
+  color: #9e8772;
+}
+
+.task-actions button:last-child:hover {
+  color: #81a651;
+  text-decoration: underline;
+}
+
+.draft-task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 10px 15px;
+  width: 80%;
+  margin: 10px auto;
+  font-weight: lighter;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.draft-task-card input,
+.draft-task-card textarea {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #dac2b2;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  font-size: 13px;
+}
+
+.draft-task-card button {
+  width: 45%;
+  padding: 10px 0;
+  margin: 5px;
+  background-color: #81a651;
+  color: white;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.draft-task-card button:hover {
+  background-color: #6b8b41;
+}
+
+.list > div > button {
+  background: none;
+  border: none;
+  color: #81a651;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 0;
+  align-self: flex-start;
+  padding: 0;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.list > div > button:hover {
+  color: #6b8b41;
+  text-decoration: underline;
+}
